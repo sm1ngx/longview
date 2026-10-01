@@ -1,0 +1,22 @@
+{
+  "name": "longview",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @longview/api --filter @longview/web dev",
+    "lint": "pnpm --filter @longview/shared build && pnpm --filter @longview/core build && pnpm --filter @longview/providers build && eslint . && pnpm -r typecheck",
+    "test": "vitest run",
+    "build": "pnpm -r build",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.35.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.45.0",
+    "vitest": "^3.2.4"
+  }
+}
